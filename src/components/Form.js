@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Form extends Component {
     render() {
         return (
-            <div>
+            <div className="formdata">
                 <h1>Url Link Parser</h1>
                 <form onSubmit={this.props.handleSubmit}>
                     <input type="text" name="url" onBlur={this.props.getInput} placeholder="Enter a URL to parse for links"/>

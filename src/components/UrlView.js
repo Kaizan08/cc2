@@ -7,7 +7,7 @@ export default class UrlView extends Component {
             console.log(this.props.links)
             urls = this.props.links.map((item, i) => {
                 return(
-                    <div key={i}>
+                    <div key={i} className="links">
                         <a href={item}>{item}</a>
                     </div>
                 );
