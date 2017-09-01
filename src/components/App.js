@@ -25,7 +25,7 @@ class App extends Component {
       var data = []
       let finishedUrl = this.state.setUrl
       let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      fetch(proxyUrl + finishedUrl).then(response => response.text()).then(text => {console.log('data', text);
+      fetch(proxyUrl + finishedUrl).then(response => response.text()).then(text => {
       let html = document.createElement('html');
       html.innerHTML = text;
       let links = html.querySelectorAll('a');
@@ -38,6 +38,7 @@ class App extends Component {
       }
       //only get unique urls
       data = _.uniq(data)
+      data.sort()
       this.setState({data: data})
       }
     )
